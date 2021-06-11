@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XenIoT Registration Form</title>
+</head>
+
+<style>
+   @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+body{
+  background: url("images/iot6.jpg");
+  padding: 0 10px;
+}
+.wrapper{
+  max-width: 500px;
+  width: 100%;
+  background:rgba(0,0,0,0.5);
+  margin: 50px auto;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.125);
+  padding: 30px;
+}
+
+.wrapper .title{
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #fec107;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.wrapper .form{
+  width: 100%;
+}
+
+.wrapper .form .inputfield{
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper .form .inputfield label{
+   width: 200px;
+   color: #757575;
+   margin-right: 10px;
+  font-size: 14px;
+}
+
+.wrapper .form .inputfield .input,
+.wrapper .form .inputfield .textarea{
+  width: 100%;
+  outline: none;
+  border: 1px solid #d5dbd9;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.wrapper .form .inputfield .textarea{
+  width: 100%;
+  height: 125px;
+  resize: none;
+}
+
+.wrapper .form .inputfield .custom_select{
+  position: relative;
+  width: 100%;
+  height: 37px;
+}
+
+.wrapper .form .inputfield .custom_select:before{
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  border: 8px solid;
+  border-color: #d5dbd9 transparent transparent transparent;
+  pointer-events: none;
+}
+
+.wrapper .form .inputfield .custom_select select{
+  -webkit-appearance: none;
+  -moz-appearance:   none;
+  appearance:        none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 1px solid #d5dbd9;
+  border-radius: 3px;
+}
+
+
+.wrapper .form .inputfield .input:focus,
+.wrapper .form .inputfield .textarea:focus,
+.wrapper .form .inputfield .custom_select select:focus{
+  border: 1px solid #fec107;
+}
+
+.wrapper .form .inputfield p{
+   font-size: 14px;
+   color: #757575;
+}
+.wrapper .form .inputfield .check{
+  width: 15px;
+  height: 15px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+.wrapper .form .inputfield .check input[type="checkbox"]{
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.wrapper .form .inputfield .check .checkmark{
+  width: 15px;
+  height: 15px;
+  border: 1px solid #fec107;
+  display: block;
+  position: relative;
+}
+.wrapper .form .inputfield .check .checkmark:before{
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  width: 5px;
+  height: 2px;
+  border: 2px solid;
+  border-color: transparent transparent #fff #fff;
+  transform: rotate(-45deg);
+  display: none;
+}
+.wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark{
+  background: #fec107;
+}
+
+.wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark:before{
+  display: block;
+}
+
+.wrapper .form .inputfield .btn{
+  width: 100%;
+   padding: 8px 10px;
+  font-size: 15px; 
+  border: 0px;
+  background:  #fec107;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+}
+
+.wrapper .form .inputfield .btn:hover{
+  background: #ffd658;
+}
+
+.wrapper .form .inputfield:last-child{
+  margin-bottom: 0;
+}
+
+@media (max-width:500px) {
+  .wrapper .form .inputfield{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .wrapper .form .inputfield label{
+    margin-bottom: 5px;
+  }
+  .wrapper .form .inputfield.terms{
+    flex-direction: row;
+  }
+} 
+</style>
+
+<body>
+    <script type="text/javascript">var submitted=false;</script>
+    
+    <!--Update the URL for thank you page on form submit -->
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"      
+    onload="if(submitted) {window.location='#';}"></iframe> 
+    
+    <!-- Update the Google forms URL in action-->
+    <form action="https://docs.google.com/forms/u/6/d/e/1FAIpQLSf1FbrPunnYqTIQEQz75RxuRPXkO1-pQdT-Rhz8_4qvFjucpw/formResponse" method="post" target="hidden_iframe" onsubmit="return validateForm(); ">
+
+
+    <div class="wrapper">
+        <div class="title">
+            Welcome to XenIoT <br>
+          "Register here!"
+        </div>
+        <div class="form">
+           <div class="inputfield">
+              <label>Name</label>
+              <input type="text" class="input" placeholder="Name" name="entry.1968089603" id="name" required>
+           </div>  
+           <div class="inputfield">
+            <label>Email Address</label>
+            <input type="text" class="input" placeholder="Email" name="entry.2123346830"  id="email" required>
+           </div> 
+           <div class="inputfield">
+            <label>College Name</label>
+            <input type="text" class="input" placeholder="College Name" name="entry.862309048" id="name" required>    
+         </div>
+           <div class="inputfield">
+            <label>Contact No.<br>(WhatsApp)</label>
+            <input type="text" class="input" placeholder="Contact Number" name="entry.2060506641" id="phone" required>    
+           </div>
+           
+           <div class="inputfield">
+            <label>City</label>
+            <input type="text" class="input" placeholder="City" name="entry.398971214" id="name" required>    
+         </div>
+           <div class="inputfield">
+            <label>Referral Code (NIL, If you don't have code)</label>
+            <input type="text" class="input" placeholder="Don't have a Code?-write NIL" name="entry.560982772">  
+           </div> 
+           <div class="inputfield">
+            <label>Payment Accepted on UPI ID-8652079325@ybl</label>
+            <img src="images/upi IoT.jpeg" height="40%" width="40%">  
+           </div> 
+           <div class="inputfield">
+           <label>UPI Reference No. / UTR / UPI Transaction ID / Reference ID (12-digit)</label>
+            <input type="text" class="input" placeholder="UPI Reference No./UTR/UPI Transaction ID/Reference ID" name="entry.1520512038" required>  
+           </div>  
+            
+           <!-- <div class="inputfield">
+              <label>Gender</label>
+              <div class="custom_select">
+                
+                <select  name="entry.167417883" id="gender">
+                  <option value="Select">Select</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="">Other</option>
+                </select>
+              </div>
+           </div> 
+            -->
+         
+
+          <!-- <div class="inputfield">
+              <label>Address</label>
+              <textarea class="textarea" placeholder="Your Address" name="entry.402334796" required></textarea>
+           </div>  -->
+
+          <div class="inputfield">
+            <label>Submit Screenshot<br>of Payment (Filename=<br>Yourname, eg. vinay.jpg)</label>
+            <a href="https://drive.google.com/drive/folders/1fhL6MwwkErKrSEO1fRMaHVaR8omRszTH?usp=sharing" class="btn">Submit Screenshot here!</a>
+         </div> 
+
+          <div class="inputfield terms">
+              <label class="check">
+                <input type="checkbox" required>
+                <span class="checkmark"></span>
+              </label>
+              <p>Agreed to terms and conditions</p>
+              <label>Quick Support-<br>Amit Gamot:6377520619<br> Ketan Kolte:9022244970  </label>
+          </div> 
+           
+          <div class="inputfield">
+            <input type="submit" value="Register" class="btn">
+          </div>
+        </div>
+
+    </div>
+    </form>    
+</div>
+
+<script type="text/javascript">
+    function validateName() {
+            var name = document.getElementById('name').value;
+            if(name.length == 0) {
+              alert("Can't be blank") ;
+              return false;
+
+            }
+            if (!name.match(/^[a-zA-Z]{3,}(?: [a-zA-Z]+){0,2}$/)) {
+              alert("Please enter correct information") ;//Validation Message
+              return false;
+            }
+            return true;
+          }
+
+          function validatePhone() {
+            var phone = document.getElementById('phone').value;
+            if(phone.length == 0) {
+              alert("Phone number can't be blank") ;//Validation Message
+              return false;
+            }
+
+            if(!phone.match(/^[0]?[789]\d{9}$/)) {
+             alert("Please enter a correct phone number") ;//Validation Message
+             return false;
+           }
+
+           return true;
+
+         }
+
+         function validateEmail () {
+
+          var email = document.getElementById('email').value;
+          if(email.length == 0) {
+            alert("Email can't be blank") ;//Validation Message
+            return false;
+
+          }
+
+          if(!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+            alert("Please enter a correct email address") ;//Validation Message
+            return false;
+
+          }
+
+          return true;
+
+        }
+
+
+        function validateForm() {
+          if (!validateName() || !validatePhone() || !validateEmail()) {
+
+            alert("Form not submitted");//Validation Message
+            return false;
+          }
+          else {
+            submitted=true;
+            alert("Form submitted Sucessfully!, We'll soon send you confermation mail.")
+            return true;
+          }
+        }
+        </script>
+
+
+</body>
+</html>
